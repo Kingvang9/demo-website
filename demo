@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
+    nav { background: #333; padding: 10px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    section { padding: 20px; }
+    footer { background: #f1f1f1; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trang Web Demo</h1>
+  </header>
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Liên hệ</a>
+  </nav>
+  <section>
+    <h2>Xin chào!</h2>
+    <p>Đây là giao diện web mẫu để minh họa cho bài tập mĩ thuật ứng dụng.</p>
+  </section>
+  <footer>
+    <p>&copy; 2026 Demo Website</p>
+  </footer>
+</body>
+</html>
