@@ -1,0 +1,125 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+  background: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #ff7eb3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff7eb3;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* Card */
+.card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255,255,255,0.1);
+  margin: 20px auto;
+  padding: 30px;
+  width: 350px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+/* Button */
+button, .cta {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display:inline-block;
+}
+
+button:hover, .cta:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #1e1e1e;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity:0; transform: translateY(-30px); }
+  to { opacity:1; transform: translateY(0); }
+}
