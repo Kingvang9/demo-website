@@ -8,8 +8,8 @@
     header { background: linear-gradient(90deg, #667eea, #764ba2); color: white; padding: 40px; text-align: center; }
     nav { background: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; cursor:pointer; }
-    section { padding: 40px; display:none; }
-    section.active { display:block; }
+    section { padding: 40px; display:none; opacity:0; transition: opacity 0.6s ease; }
+    section.active { display:block; opacity:1; }
     .card {
       background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin: 20px auto; padding: 20px; width: 300px; transition: transform 0.3s;
@@ -34,6 +34,7 @@
     <a onclick="showPage('contact')">Liên hệ</a>
   </nav>
 
+  <!-- Trang chủ -->
   <section id="home" class="active">
     <div class="card">
       <h2>Xin chào!</h2>
@@ -42,15 +43,18 @@
     </div>
   </section>
 
+  <!-- Trang giới thiệu -->
   <section id="about">
     <h2>Giới thiệu</h2>
-    <p>Trang này giới thiệu về dự án mĩ thuật ứng dụng của bạn.</p>
+    <p>Trang này giới thiệu về dự án mĩ thuật ứng dụng của bạn. Bạn có thể thêm hình ảnh, timeline hoặc profile để làm sinh động hơn.</p>
   </section>
 
+  <!-- Trang liên hệ -->
   <section id="contact">
     <h2>Liên hệ</h2>
     <p>Email: demo@example.com</p>
     <p>Số điện thoại: 0123 456 789</p>
+    <button onclick="alert('Đã gửi yêu cầu liên hệ!')">Gửi liên hệ</button>
   </section>
 
   <footer>
@@ -59,14 +63,12 @@
 
   <script>
     function showPage(pageId) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('section').forEach(sec => {
+        sec.classList.remove('active');
+      });
       document.getElementById(pageId).classList.add('active');
     }
   </script>
 </body>
 </html>
 
-    <p>&copy; 2026 Demo Website</p>
-  </footer>
-</body>
-</html>
