@@ -2,19 +2,33 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Website Demo</title>
+  <title>Website Hiện Đại</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    header { background: #4CAF50; color: white; padding: 20px; text-align: center; }
-    nav { background: #333; padding: 10px; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
-    section { padding: 20px; }
-    footer { background: #f1f1f1; text-align: center; padding: 10px; }
+    body { margin:0; font-family: 'Poppins', sans-serif; background: #f9f9f9; }
+    header { 
+      background: linear-gradient(90deg, #667eea, #764ba2); 
+      color: white; padding: 40px; text-align: center; 
+    }
+    nav { background: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; }
+    section { display: flex; justify-content: center; flex-wrap: wrap; padding: 40px; }
+    .card {
+      background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px; padding: 20px; width: 250px; transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    button {
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      border: none; padding: 10px 20px; border-radius: 20px; color: white; cursor: pointer;
+      font-weight: bold;
+    }
+    footer { background: #333; color: white; text-align: center; padding: 20px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Trang Web Demo</h1>
+    <h1>Thiết kế Web Hiện Đại</h1>
+    <p>Phong cách trẻ trung, màu sắc bắt mắt</p>
   </header>
   <nav>
     <a href="#">Trang chủ</a>
@@ -22,8 +36,16 @@
     <a href="#">Liên hệ</a>
   </nav>
   <section>
-    <h2>Xin chào!</h2>
-    <p>Đây là giao diện web mẫu để minh họa cho bài tập mĩ thuật ứng dụng.</p>
+    <div class="card">
+      <h2>Sản phẩm 1</h2>
+      <p>Mô tả ngắn gọn về sản phẩm.</p>
+      <button>Xem thêm</button>
+    </div>
+    <div class="card">
+      <h2>Sản phẩm 2</h2>
+      <p>Mô tả ngắn gọn về sản phẩm.</p>
+      <button>Xem thêm</button>
+    </div>
   </section>
   <footer>
     <p>&copy; 2026 Demo Website</p>
