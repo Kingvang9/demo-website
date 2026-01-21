@@ -5,16 +5,14 @@
   <title>Website Hiện Đại</title>
   <style>
     body { margin:0; font-family: 'Poppins', sans-serif; background: #f9f9f9; }
-    header { 
-      background: linear-gradient(90deg, #667eea, #764ba2); 
-      color: white; padding: 40px; text-align: center; 
-    }
+    header { background: linear-gradient(90deg, #667eea, #764ba2); color: white; padding: 40px; text-align: center; }
     nav { background: white; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; }
-    section { display: flex; justify-content: center; flex-wrap: wrap; padding: 40px; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; cursor:pointer; }
+    section { padding: 40px; display:none; }
+    section.active { display:block; }
     .card {
       background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin: 20px; padding: 20px; width: 250px; transition: transform 0.3s;
+      margin: 20px auto; padding: 20px; width: 300px; transition: transform 0.3s;
     }
     .card:hover { transform: translateY(-5px); }
     button {
@@ -31,23 +29,43 @@
     <p>Phong cách trẻ trung, màu sắc bắt mắt</p>
   </header>
   <nav>
-    <a href="#">Trang chủ</a>
-    <a href="#">Giới thiệu</a>
-    <a href="#">Liên hệ</a>
+    <a onclick="showPage('home')">Trang chủ</a>
+    <a onclick="showPage('about')">Giới thiệu</a>
+    <a onclick="showPage('contact')">Liên hệ</a>
   </nav>
-  <section>
+
+  <section id="home" class="active">
     <div class="card">
-      <h2>Sản phẩm 1</h2>
-      <p>Mô tả ngắn gọn về sản phẩm.</p>
-      <button>Xem thêm</button>
-    </div>
-    <div class="card">
-      <h2>Sản phẩm 2</h2>
-      <p>Mô tả ngắn gọn về sản phẩm.</p>
-      <button>Xem thêm</button>
+      <h2>Xin chào!</h2>
+      <p>Đây là trang chủ với thiết kế hiện đại.</p>
+      <button onclick="alert('Bạn vừa bấm nút!')">Thử tương tác</button>
     </div>
   </section>
+
+  <section id="about">
+    <h2>Giới thiệu</h2>
+    <p>Trang này giới thiệu về dự án mĩ thuật ứng dụng của bạn.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Liên hệ</h2>
+    <p>Email: demo@example.com</p>
+    <p>Số điện thoại: 0123 456 789</p>
+  </section>
+
   <footer>
+    <p>&copy; 2026 Demo Website</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
     <p>&copy; 2026 Demo Website</p>
   </footer>
 </body>
