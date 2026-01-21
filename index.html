@@ -2,14 +2,13 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Trang chủ - Dark Mode</title>
-  <link rel="stylesheet" href="style-dark.css">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Website Demo Dark Mode</h1>
-    <p>Phong cách sang trọng, hiện đại</p>
-    <a href="about.html" class="cta">Khám phá ngay</a>
+    <h1>Website Demo</h1>
+    <p>Light/Dark Mode Toggle</p>
   </header>
   <nav>
     <a href="index.html">Trang chủ</a>
@@ -17,14 +16,32 @@
     <a href="contact.html">Liên hệ</a>
   </nav>
   <section>
-    <div class="card">
-      <h2>Xin chào!</h2>
-      <p>Đây là phiên bản Dark Mode của website demo.</p>
-      <button onclick="alert('Bạn vừa bấm nút!')">Thử tương tác</button>
-    </div>
+    <h2>Xin chào!</h2>
+    <p>Đây là trang chủ với chế độ đổi màu.</p>
   </section>
   <footer>
     <p>&copy; 2026 Demo Website</p>
   </footer>
+
+  <!-- Nút toggle -->
+  <button class="toggle-btn" onclick="toggleMode()">🌙 / ☀️</button>
+
+  <script>
+    // Kiểm tra trạng thái đã lưu
+    if(localStorage.getItem('theme') === 'dark'){
+      document.body.classList.add('dark-mode');
+    }
+
+    function toggleMode(){
+      document.body.classList.toggle('dark-mode');
+      // Lưu trạng thái
+      if(document.body.classList.contains('dark-mode')){
+        localStorage.setItem('theme','dark');
+      } else {
+        localStorage.setItem('theme','light');
+      }
+    }
+  </script>
 </body>
 </html>
+
